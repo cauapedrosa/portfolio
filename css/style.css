@@ -1,0 +1,78 @@
+@import url(/css/vars.css);
+
+/* Bottom Bar */
+.botbar {
+	height: 1rem;
+    background: black;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+/* Top Bar */
+.topbar{
+    justify-content: center;
+}
+.topbar .navbar .navbar-brand {
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    color: var(--color1);
+    font-weight: bold;
+
+    /* background-color: blue; */
+}
+.topbar .navbar {
+    /* border: 1px solid white; */
+    padding: 2% 10%;
+    color: var(--color1);
+}
+.topbar .nav-item {
+    vertical-align: center;
+}
+.topbar .nav-item .nav-link {
+    color: var(--color1);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container .row {
+    /* border: 1px solid white; */
+    /* background-color: pink; */
+    padding: 4rem;
+}
+
+
+/* Images */
+.bg{
+    visibility: visible;
+    position: fixed;
+    opacity: 90%
+}
+.bg:hover {
+    transition: 1s ease-in-out;
+}
+
+.Wraith {
+    float: right;
+    right: 0px;
+    top: 0px;
+    transition: ease-in-out 1s;
+    transform: scale(98%);
+    opacity: 35%;
+}
+.Wraith:hover {
+    transform: scale(100%);
+    opacity: 100%;
+}
+
+.Octane {
+    /* transform: rotateY(180deg) scale(90%); */
+    transform: rotateY(180deg) translateY(25%);
+    transition: ease-in-out 1s;
+    opacity: 50%;
+    max-width: 60%;
+}
+.Octane:hover {
+    transform: rotateY(0) translateY(0) scale(100%);
+    opacity: 100%;
+
+}
