@@ -5,24 +5,38 @@
 	--color1: #3A4257;
     --color2: #F0DDBC;
 }
-body {
-	background-color: var(--color1);
+
+.bg{
+    visibility: visible;
+    position: fixed;
 }
-.imgWraith {
+.bg:hover {
+    transition: 1s ease-in-out;
+}
+
+.Wraith {
     float: right;
+    right: 0px;
+    top: 0px;
+    transition: ease-in-out 1s;
+    transform: 0;
 }
-body p, h1{
+.Wraith:hover {
+    transform: scale(80%);
+}
+
+.Octane {
     float: left;
-    color: white;
+    bottom: 0px;
+    transform: rotateY(180deg) scale(50%);
+    height: 50%;
+    transition: ease-in-out 1s;
+}
+.Octane:hover {
+    transform: rotateY(0deg) scale(50%);
 }
 
 .botbar {
-    color: white;
-	clear: both;
-	position: fixed;
-	bottom: 0px;
-	left: 0px;
-	width: 100%;
 	height: 2%;
     background: black;
     text-align: center;
