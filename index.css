@@ -1,0 +1,30 @@
+:root {
+    font-family: Helvetica, Arial, sans-serif;
+    --margin: 10px;
+    --border: 5px;
+	--color1: #3A4257;
+    --color2: #F0DDBC;
+}
+body {
+	background-color: var(--color1);
+}
+.imgWraith {
+    float: right;
+}
+body p, h1{
+    float: left;
+    color: white;
+}
+
+.botbar {
+    color: white;
+	clear: both;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 2%;
+    background: black;
+    text-align: center;
+    font-size: 1em;
+}
