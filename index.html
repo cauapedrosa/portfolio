@@ -3,75 +3,95 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-------------------- Bootstrap -------------------->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-------------------- Bootstrap -------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <title>Portfolio - Cauã Pedrosa</title>
-
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <!-------------------- Header -------------------->
 <header>
-<!-------------------- Navbar -------------------->
-    <div class="topbar">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#">Cauã Pedrosa</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-            </ul>
-        </div>
-        </nav>
-        
-    </div>           
+    <!-------------------- Navbar -------------------->
+    <div class="topbar" style="height: 100px;position: fixed; top: 0px; background-color: black; border: 2px solid red;">    
+            <nav class="navbar navbar-expand-lg navbar-dark justify-content-around clearfix">
+                <img src="./img/apex-legends-logo-1.png" style="position: fixed;left: 0px; top: 0px;" class="bg-image" alt="Apex Legends Logo">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="navbar-toggler-icon"></div></button>
+                <a class="navbar-brand " href="#">Cauã Pedrosa</a>                                       
+                <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mailto:cauapedrosa@live.com">Contact</a></li>
+                    </ul>
+                </div>
+        </nav>        
     </div>
+
 </header>
 <!-------------------- /Header -------------------->
 
 
 <!-------------------- Body -------------------->
-<body class="bg-dark text-white">
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <h1>This will be a Portfolio.</h1>
-                <br>
+
+<body class="bg-dark text-white kc" style="background: url('./img/KC1-1.png') no-repeat center; background-size: cover; margin-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm col-md-4">
+                    <span class="h1">This will be A portfolio.</span>
+                </div>
+                <div class="col-md-6">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet possimus explicabo tenetur est, sequi expedita officiis ea debitis sint voluptatibus cumque animi aliquam, eius iste, molestiae dolor mollitia repellat ipsum eos dolore suscipit! Harum, quidem!</p>
+                </div>
             </div>
-            <div class="col-md">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <div class="row">
+                <div class="col-sm col-md-4">
+                    <span class="h1">Here will be skills.</span>
+                </div>
+                <div class="col-md-6">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In odit doloribus obcaecati ex est voluptatum ducimus consequuntur dicta earum blanditiis?</p>
+                </div>
             </div>
+
+            <div class="row">
+                <div class="media">
+                    <img class="align-self-center" src="./img/apex-logo-white.png" style="max-height: 100px; border: 10px; float: left" alt="Generic placeholder image">
+                    <br>
+                    <div class="media-body">
+                      <h5 class="mt-0">Center-aligned media</h5>
+                      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                      <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </div>
+                  </div>
+            </div> 
+
+        </div>          
+        <!-------------------- Bootstrap -------------------->
+        <div>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         </div>
-    </div>
-
-
-<!-------------------- Bootstrap -------------------->
-<div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</div>
-
-<!-------------------- /Body -------------------->
-</body>
-
-<!-------------------- Images -------------------->
-    <div class="bg Wraith bg-image">
-        <img src="img/wraith.png" class="d-none d-lg-block bg-image" alt="Wraith" >
-    </div>
-    <div class="bg-image">
-        <img src="img/octane.png" class="Octane fixed-bottom img-fluid bg-image" alt="Octane">
-    </div>
-
-<!-------------------- Botbar -------------------->
-<div class="botbar fixed-bottom">
-        <p>Under Development - 2021</p>
-    </div>
-</html>
+        <!-------------------- Images -------------------->
+        
+        <div class="bg-image">
+            <img src="img/wraith.png" class="Wraith d-none d-lg-block" alt="Wraith" >
+        </div>
+        
+        <div class="bg-image">
+            <img src="img/octane.png" class="Octane img-fluid bg-image" alt="Octane">
+        </div>
+        <!-------------------- /Body -------------------->
+    </body>
+    
+    
+    <!-------------------- Footer -------------------->
+    <footer>
+        <div class="botbar fixed-bottom">
+            <p>Under Development - 2021</p>
+        </div>
+    </footer>
+    </html>
