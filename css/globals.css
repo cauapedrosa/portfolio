@@ -1,30 +1,31 @@
-/* root */
+/* ---------- root ---------- */
 :root {
-    /* CSS Variables */
+    /* ---------- CSS Variables ---------- */
     --margin: 10px;
     --border: 5px;
     --colorPrimary: #4458dc;
     --colorPrimary2: #854fee;
     --colorTitle: #eaecff;
-    --colorText:  #d6d6d6;  
-    --colorBorder: #516b7c;  
+    --colorText:  #d6d6d6; 
+    --colorBorder: #516b7c;
     --colorGradient: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
     --colorShadow:  0px 10px 30px rgba(118, 85, 225, 0.3);
     --boxShadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+    --topbarHeight: 100px;
     /* Font Family Variables */
     --roboto: 'Roboto', regular;
 }
 
-/* body */
+/* ---------- body ---------- */
 html, body{
     margin: 0%;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    background-color: #111;
+    background-color: #000;
 }
 
-/* @font-face */ 
+/* ---------- @font-face ---------- */ 
 @font-face{
     font-family: "Roboto";
     src: '../fonts/Roboto/Roboto-Regular.ttf';

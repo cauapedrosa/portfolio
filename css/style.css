@@ -1,6 +1,6 @@
 @import url(/css/globals.css);
 
-/* Bottom Bar */
+/* ########## Bottom Bar ########## */
 .botbar {
 	height: 1rem;
     background: black;
@@ -8,15 +8,15 @@
     font-size: 0.7rem;
 }
 
-/* Top Bar */
+/* ########## Top Bar ########## */
 .topbar{
-    /* border: 1px solid magenta; */
+    border: 2px solid red;
+    background-color: black;
+    height: var(--topbarHeight);
     width: 100%;
-    padding-left: calc(100px + 1rem);
-}
-.topbar nav{
     position: fixed;
     top: 0px;
+    padding-left: calc(100px + 1rem);
 }
 .topbar ul{
     /* border: 1px solid magenta; */
@@ -33,10 +33,10 @@
 }
 .topbar .navbar .navbar-brand {
     /* border: 1px solid white; */
+    display: inline-block;
     padding: 2rem;
     font: normal 500 2rem/1rem var(--roboto);
     color: var(--colorTitle);
-
 }
 
 .topbar .nav-item .nav-link {
@@ -50,26 +50,48 @@
     vertical-align: center;
 }
 
-
-/* Body */
-body .container .row span {
-    display: block;
-    text-transform: uppercase;
+/* ########## Container ########## */
+.container{
+    /* border: 1px solid magenta; */
+    position: inherit;
+    z-index: 1;
 }
 
-/* Container */
 .container .row {
-    border: 1px solid #666;
+    position: inherit;
+    z-index: 3;
+    border: 1px rgb(140, 0, 0) solid;
     background-color: #222;
-    padding: 3rem;
+    padding: 2rem;
     margin: 4rem;
+    justify-content: space-evenly;
 }
-/* bg */
-.kc {
-    background-size: cover;
+.container .row span {
+    text-transform: uppercase;
+    z-index: 1;
 }
 
-/* Images */
+/* ########## Kings Canyon Background ########## */
+.KC {
+    background-image: url('../img/KC1.png');
+    margin-top: 100px; /* Topbar Height*/
+    height: 100vh;
+  
+    /* Parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    z-index: -1;
+}
+.KC::after{
+    background-color: #000;
+    opacity: 50%;
+}
+
+/* ########## Images ########## */
 .Wraith {
     position: fixed;
     float: right;
@@ -78,12 +100,12 @@ body .container .row span {
     transition: 1s ease;
     transform: scale(98%);
     opacity: 35%;
+    z-index: 0;
 }
 .Wraith:hover {
     transform: scale(100%);
     opacity: 100%;
 }
-
 .Octane {
     position: fixed;
     float: left;
@@ -93,8 +115,51 @@ body .container .row span {
     transition: 1s ease;
     opacity: 35%;
     max-width: 60%;
+    z-index: 0;
 }
 .Octane:hover {
     transform: rotateY(180deg) translateY(0) scale(100%) translateX(-25%);
     opacity: 100%;
+    z-index: 5;
 }
+
+/* ---------- @media queries ---------- */ 
+@media screen and (max-width: 991px) {
+    
+    .topbar{
+        background: none;
+        background-color: none;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+	.Wraith{
+        display: none;
+    }
+    .Octane:hover {
+        transform: rotateY(180deg) translateY(24%) scale(100%) translateX(-1%);
+        opacity: 100%;
+        z-index: 5;
+    }
+    .container .row {
+        padding: 2rem 0 2rem 0;
+        margin: 1rem;
+        justify-content: space-around;
+        text-align: center;
+        overflow-wrap: break-word;
+
+    }
+    .container .row div img{
+        border: 1px solid white;
+        padding: 10px;
+        max-height: 25vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container .row {
+        padding: 0;
+        margin: 1rem 0 1rem 0;
+    }
+
+} 
