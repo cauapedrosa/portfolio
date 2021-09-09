@@ -2,13 +2,14 @@
 
 /* ########## Top Bar ########## */
 .topbar{
-    border: 2px solid red;
-    background-color: black;
+    border: 2px solid var(--colorPrimary);
+    background-color: var(--colorBackground);
     height: var(--topbarHeight);
     width: 100%;
     position: fixed;
     top: 0px;
     padding-left: calc(100px + 1rem);
+    z-index: 3;
 }
 .topbar ul{
     /* border: 1px solid magenta; */
@@ -25,10 +26,10 @@
 }
 .topbar .navbar .navbar-brand {
     /* border: 1px solid white; */
-    display: inline-block;
-    padding: 2rem;
+    margin-top: 10px;
+    padding: 1rem;
     font: normal 500 2rem/1rem var(--roboto);
-    color: var(--colorTitle);
+    color: var(--colorPrimary);
 }
 
 .topbar .nav-item .nav-link {
@@ -45,22 +46,27 @@
 /* ########## Container ########## */
 .container{
     /* border: 1px solid magenta; */
-    position: inherit;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
 }
 
 .container .row {
-    position: inherit;
-    z-index: 3;
-    border: 1px rgb(140, 0, 0) solid;
-    background-color: #222;
+    border: 1px solid var(--colorBorder);
+    position: relative;
+    background-color: var(--colorBackground);
     padding: 2rem;
     margin: 4rem;
     justify-content: space-evenly;
 }
-.container .row span {
+.container h1, h3{
     text-transform: uppercase;
-    z-index: 1;
+    color: var(--colorTitle);
+}
+.container p{
+    color: var(--colorText);
+}
+.container h3 {
+    text-transform: uppercase;
 }
 .container .row div img{
     padding: 10px;
@@ -80,7 +86,6 @@
     background-image: url('../img/KC1.png');
     margin-top: 100px; /* Topbar Height*/
     height: 100vh;
-  
     /* Parallax */
     background-attachment: fixed;
     background-position: center;
@@ -129,12 +134,10 @@
 
 /* ---------- @media queries ---------- */ 
 @media screen and (max-width: 991px) {
-    
     .topbar{
         text-align: center;
         overflow-wrap: break-word;
     }
-
 	.Wraith{
         display: none;
     }
@@ -149,15 +152,5 @@
         justify-content: space-around;
         text-align: center;
         overflow-wrap: break-word;
-
-    }
-    
+    }    
 }
-
-@media screen and (max-width: 500px) {
-    .container .row {
-        padding: 0;
-        margin: 1rem 0 1rem 0;
-    }
-
-} 
