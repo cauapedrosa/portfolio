@@ -1,12 +1,4 @@
-@import url(/css/globals.css);
-
-/* ########## Bottom Bar ########## */
-.botbar {
-	height: 1rem;
-    background: black;
-    text-align: center;
-    font-size: 0.7rem;
-}
+@import url(globals.css);
 
 /* ########## Top Bar ########## */
 .topbar{
@@ -69,6 +61,18 @@
 .container .row span {
     text-transform: uppercase;
     z-index: 1;
+}
+.container .row div img{
+    padding: 10px;
+    max-height: 25vh;
+}
+
+/* ########## Bottom Bar ########## */
+.botbar {
+	height: 1rem;
+    background: black;
+    text-align: center;
+    font-size: 0.7rem;
 }
 
 /* ########## Kings Canyon Background ########## */
@@ -147,11 +151,7 @@
         overflow-wrap: break-word;
 
     }
-    .container .row div img{
-        border: 1px solid white;
-        padding: 10px;
-        max-height: 25vh;
-    }
+    
 }
 
 @media screen and (max-width: 500px) {
