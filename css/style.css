@@ -1,107 +1,182 @@
-@import url(globals.css);
+@import url('globals.css');
+html {
+    scroll-snap-type: y mandatory;
+    /* scroll-behavior: smooth; */
+}
 
 /* ########## Top Bar ########## */
-.topbar{
-    border: 2px solid var(--colorPrimary);
+
+.topbar {
+    position: relative;
+    outline: 2px solid var(--colorPrimary);
+    outline-offset: -2px;
     background-color: var(--colorBackground);
     height: var(--topbarHeight);
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    padding-left: calc(100px + 1rem);
-    z-index: 3;
-}
-.topbar ul{
-    /* border: 1px solid magenta; */
-    background-color: black;
-    text-align: center;
-    justify-content: right;
-    right: 0px;
-    padding: 1rem;
-}
-.topbar button{
-    position: fixed;
-    left:0px;
-    top:0px;
-}
-.topbar .navbar .navbar-brand {
-    /* border: 1px solid white; */
-    margin-top: 10px;
-    padding: 1rem;
-    font: normal 500 2rem/1rem var(--roboto);
-    color: var(--colorPrimary);
+    top: 0;
+    left: var(--topbarHeight);
+    width: calc(100% - var(--topbarHeight));
+    /*  */
+    display: flex;
+    justify-content: space-evenly;
+    vertical-align: middle;
+    /*  */
+    scroll-snap-align: start;
 }
 
-.topbar .nav-item .nav-link {
-    /* border: 1px solid white; */
+.topbar>* {
+    text-decoration: none;
+}
+
+.topbar .nav-link {
+    position: relative;
+    top: 0;
+    padding-top: 3rem;
     color: var(--colorText);
     font-weight: bold;
     text-transform: uppercase;
     font: normal 500 20px/8px var(--roboto);
 }
-.topbar .nav-item {
-    vertical-align: center;
+
+.topbar .nav-link:hover {
+    text-decoration: underline var(--colorLink);
 }
 
-/* ########## Container ########## */
-.container{
+.topbar .brand-logo {
+    /* outline: 1px solid white; */
+    padding: 0.8rem;
+    font: normal 500 2rem/1rem var(--roboto);
+    color: var(--colorPrimary);
+}
+
+/* ########## Content ########## */
+
+.container {
     /* border: 1px solid magenta; */
+    max-width: 1000px;
     position: relative;
-    z-index: 2;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: max-content;
 }
 
 .container .row {
-    border: 1px solid var(--colorBorder);
+    outline: 1px solid var(--colorBorder);
     position: relative;
     background-color: var(--colorBackground);
-    padding: 2rem;
-    margin: 4rem;
+    padding: 3%;
     justify-content: space-evenly;
+    height: fit-content;
+    max-height: max-content;
 }
-.container h1, h3{
+
+.container h1, h3 {
     text-transform: uppercase;
     color: var(--colorTitle);
 }
-.container p{
+
+.container p {
     color: var(--colorText);
 }
-.container h3 {
-    text-transform: uppercase;
-}
-.container .row div img{
+
+.container .row div img {
     padding: 10px;
-    max-height: 25vh;
+    max-width: 25%;
+}
+
+.contactsBar {
+    /* outline: 1px solid fuchsia; */
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contactLogo {
+    --iconSize: 100px;
+    max-height: var(--iconSize);
+    max-width: var(--iconSize);
+    outline: 0.1px solid white;
+    display: block;
+}
+
+.contactsBar a {
+    /* outline: 1px solid lime; */
+    max-width: max-content;
+}
+
+.row .row-title {
+    float: left;
+}
+
+.row .row-content {
+    float: right;
+}
+
+/* ########## Section ########## */
+
+section {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    min-height: 50vh;
+    background: none;
+    /* outline: 1px solid lime; */
+    margin-block: 10%;
 }
 
 /* ########## Bottom Bar ########## */
+
 .botbar {
-	height: 1rem;
+    position: relative;
+    bottom: -20px;
+    outline: 1px solid #fff;
+    height: 22px;
+    line-height: 20px;
+    color: white;
     background: black;
+    width: 100%;
+    margin: auto;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 12px;
+    scroll-snap-align: end;
 }
 
 /* ########## Kings Canyon Background ########## */
-.KC {
+
+.KC1 {
     background-image: url('../img/KC1.png');
-    margin-top: 100px; /* Topbar Height*/
-    height: 100vh;
+    /* margin-top: var(--topbarHeight); */
+    /* Topbar Height*/
+    height: 100%;
+    width: 100vw;
     /* Parallax */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    z-index: -1;
-}
-.KC::after{
+    /* overflow: hidden; */
     background-color: #000;
-    opacity: 50%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.scrollable {
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*  */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 /* ########## Images ########## */
+
 .Wraith {
+    /* display: none; */
     position: fixed;
     float: right;
     right: -100px;
@@ -111,10 +186,13 @@
     opacity: 35%;
     z-index: 0;
 }
+
 .Wraith:hover {
     transform: scale(100%);
     opacity: 100%;
+    z-index: 5;
 }
+
 .Octane {
     position: fixed;
     float: left;
@@ -126,31 +204,33 @@
     max-width: 60%;
     z-index: 0;
 }
+
 .Octane:hover {
     transform: rotateY(180deg) translateY(0) scale(100%) translateX(-25%);
     opacity: 100%;
     z-index: 5;
 }
 
-/* ---------- @media queries ---------- */ 
+/* ---------- @media queries ---------- */
+
 @media screen and (max-width: 991px) {
-    .topbar{
+    .topbar {
         text-align: center;
         overflow-wrap: break-word;
     }
-	.Wraith{
+    .Wraith {
         display: none;
     }
     .Octane:hover {
         transform: rotateY(180deg) translateY(24%) scale(100%) translateX(-1%);
         opacity: 100%;
-        z-index: 5;
     }
     .container .row {
-        padding: 2rem 0 2rem 0;
-        margin: 1rem;
         justify-content: space-around;
         text-align: center;
         overflow-wrap: break-word;
-    }    
+    }
+    .nav-link {
+        display: none;
+    }
 }

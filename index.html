@@ -5,109 +5,134 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-------------------- Bootstrap -------------------->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
 
     <title>Portfolio - Cauã Pedrosa</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="/img/apex-legends-logo-1.png" />
 
 </head>
-<!-------------------- Header -------------------->
-<header>
-    <!-------------------- Topbar -------------------->
-    <div class="topbar">
-        <nav class="navbar navbar-expand-lg navbar-dark justify-content-around clearfix">
-            <img src="./img/apex-legends-logo-1.png" style="position: fixed;left: 0px; top: 0px;" class="bg-image"
-                alt="Apex Legends Logo">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="navbar-toggler-icon"></div>
-            </button>
-            <a class="navbar-brand " href="#"><p>Cauã Pedrosa</p></a>
-            <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mailto:cauapedrosa@live.com">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-</header>
-<!-------------------- /Header -------------------->
-
-<!-------------------- Images -------------------->
-<img src="img/wraith.png" class="Wraith d-none d-lg-block" alt="Wraith">
-<img src="img/octane.png" class="Octane" alt="Octane">
 
 <!-------------------- Body -------------------->
-<section class="KC">
 
-    <body>
-        <div class="container" class="text-white"style="padding: 1rem;" >
+<body class="KC1">
+    <div class="scrollable">
+
+        <!-------------------- Images -------------------->
+        <img src="img/wraith.png" class="Wraith" alt="Wraith">
+        <img src="img/octane.png" class="Octane" alt="Octane">
+
+        <!-------------------- Topbar -------------------->
+        <img src="./img/apex-legends-logo-1.png" id="top" style="position: absolute;left: 0px; top: 0px;"
+            alt="Apex Legends Logo">
+
+        <div class="topbar">
+            <a class="brand-logo " href="#top">
+                <p>Cauã Pedrosa</p>
+            </a>
+            <a class="nav-link" href="#top">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#apex-description">Apex Legends</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
+
+        </div>
+
+
+        <!-- <div class="KC1"></div> -->
+
+
+        <div class="container" style="padding: 1rem;">
             <!--------------- Row --------------->
-            <div class="row">
-                <div class="col-sm col-md-4">
+            <section class="row" id="about">
+                <div class="row-title">
                     <h1>This will be A portfolio.</h1>
                 </div>
-                <div class="col-md-6">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet possimus explicabo tenetur est,
-                        sequi expedita officiis ea debitis sint voluptatibus cumque animi aliquam, eius iste, molestiae
+                <div class="row-content">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet possimus explicabo tenetur
+                        est,
+                        sequi expedita officiis ea debitis sint voluptatibus cumque animi aliquam, eius iste,
+                        molestiae
                         dolor mollitia repellat ipsum eos dolore suscipit! Harum, quidem!</p>
                 </div>
-            </div>
+            </section>
             <!--------------- Row --------------->
-            <div class="row">
-                <div class="col-sm col-md-4">
+            <section class="row" id="skills">
+                <div class="row-title">
                     <h1>Here will be skills.</h1>
                 </div>
-                <div class="col-md-6">
+                <div class="row-content">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In odit doloribus obcaecati ex est
                         voluptatum ducimus consequuntur dicta earum blanditiis?</p>
                 </div>
-            </div>
+            </section>
             <!--------------- Row --------------->
-            <div class="row">
-                <div class="col-sm col-md-4">
+            <section class="row" id="apex-description">
+                <div class="row-title">
                     <img class="img-fluid" src="./img/apex-logo-white.png" alt="Apex Legends Logo">
                 </div>
-                <div class="col-md-6">
+                <div class="row-content">
                     <h3>Apex Legends</h3>
-                    <p>Apex Legends is a free-to-play battle royale-hero shooter game developed by Respawn Entertainment
-                        and published by Electronic Arts. It was released for Microsoft Windows, PlayStation 4, and Xbox
+                    <p>Apex Legends is a free-to-play battle royale-hero shooter game developed by Respawn
+                        Entertainment
+                        and published by Electronic Arts. It was released for Microsoft Windows, PlayStation 4, and
+                        Xbox
                         One in February 2019</p>
                 </div>
-            </div>
+            </section>
+            <!--------------- Row --------------->
+            <section class="row" id="projects">
+                <div class="row-title">
+                    <h1>Some other projects</h1>
+                </div>
+                <div class="row-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium consectetur at fuga
+                        asperiores reiciendis veniam, doloribus sapiente. Aspernatur pariatur cupiditate laboriosam
+                        facere vitae velit adipisci, hic praesentium explicabo, nulla illo magnam ducimus soluta
+                        totam nesciunt tempora debitis! Tempore nobis sint quos unde ipsum, eveniet eligendi atque
+                        iste tenetur dolor culpa!</p>
+                </div>
+            </section>
+            <!--------------- Row --------------->
+            <section class="row" id="contact">
+                <div class="row-title">
+                    <h1>Contact</h1>
+                </div>
+                <div class="row-content">
+                    <div class="contactsBar">
+                        <a href="https://github.com/cauapedrosa">
+                            <img class="contactLogo" src="./img/github-icon.png" alt="GitHub">
+                        </a>
+                        <a href="#email">
+                            <img class="contactLogo" src="./img/email.png" alt="E-Mail">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
         </div>
-        <!-------------------- Bootstrap -------------------->
-        <div>
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                crossorigin="anonymous"></script>
+
+        <div class="botbar">
+            <p>Under Development - 2021</p>
         </div>
-        <div>
-            <script src="js/main,js"></script>
-        </div>
-        </div>
-    </body>
-</section>
+    </div>
+
+
+    <!-------------------- Load Bootstrap -------------------->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+
+
+</body>
 <!-------------------- /Body -------------------->
 
-<!-------------------- Footer -------------------->
-<footer>
-    <div class="botbar fixed-bottom">
-        <p>Under Development - 2021</p>
-    </div>
-</footer>
 
 </html>
