@@ -1,7 +1,7 @@
 @import url('globals.css');
 html {
-    scroll-snap-type: y mandatory;
-    /* scroll-behavior: smooth; */
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
 }
 
 /* ########## Top Bar ########## */
@@ -20,6 +20,7 @@ html {
     justify-content: space-evenly;
     vertical-align: middle;
     /*  */
+    scroll-snap-align: start;
 }
 
 .topbar>* {
@@ -42,15 +43,16 @@ html {
 
 .topbar .brand-logo {
     /* outline: 1px solid white; */
-    padding: 0.8rem;
+    /* padding: 1%; */
     font: normal 500 2rem/1rem var(--roboto);
     color: var(--colorPrimary);
+    line-height: 1em;
 }
 
 /* ########## Content ########## */
 
 .container {
-    /* border: 1px solid magenta; */
+    /* outline: 1px solid magenta; */
     max-width: 1000px;
     position: relative;
     margin: auto;
@@ -61,13 +63,24 @@ html {
 }
 
 .container .row {
-    outline: 1px solid var(--colorBorder);
     position: relative;
+    text-align: center;
+}
+
+.container .card div {
+    /* outline: 1px solid lime; */
+}
+
+.card {
+    outline: 1px solid var(--colorBorder);
     background-color: var(--colorBackground);
-    padding: 3%;
+    max-width: 100%;
+    min-height: 50vh;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    height: fit-content;
-    max-height: max-content;
+    margin-block: 10vh;
 }
 
 .container h1, h3 {
@@ -92,12 +105,35 @@ html {
     justify-content: space-evenly;
 }
 
+.contactLink {
+    --lineW: 1px;
+    border: var(--lineW) solid #fff;
+    outline: var(--lineW) solid #fff;
+    outline-offset: calc(-1 * var(--lineW));
+    transition: outline-offset 200ms linear;
+}
+
+.contactLink:hover {
+    outline-offset: calc(2 * var(--lineW));
+}
+
 .contactLogo {
     --iconSize: 100px;
-    max-height: var(--iconSize);
-    max-width: var(--iconSize);
-    outline: 0.1px solid white;
     display: block;
+    height: var(--iconSize);
+    min-width: var(--iconSize);
+}
+
+.github {
+    background-image: url('../img/github-icon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.email {
+    background-image: url('../img/email.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .contactsBar a {
@@ -105,44 +141,42 @@ html {
     max-width: max-content;
 }
 
-.row .row-title {
-    float: left;
-}
+.row-title {}
 
-.row .row-content {
+.row-content {
     float: right;
 }
 
 /* ########## Section ########## */
 
 section {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-    min-height: 50vh;
+    scroll-snap-align: start;
+    /* scroll-snap-stop: always; */
+    min-height: 100vh;
     background: none;
     /* outline: 1px solid lime; */
     margin-block: 10%;
-}
-
-#contact{
-    
+    scroll-margin: 10%;
 }
 
 /* ########## Bottom Bar ########## */
 
 .botbar {
-    position: relative;
-    bottom: -20px;
     outline: 1px solid #fff;
-    height: 22px;
-    line-height: 20px;
-    color: white;
+    position: relative;
+    bottom: 0;
+    height: 16px;
     background: black;
-    width: 100%;
+    max-width: 28ch;
     margin: auto;
-    text-align: center;
-    font-size: 12px;
     scroll-snap-align: end;
+}
+
+.botbar>* {
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+    text-align: center;
 }
 
 /* ########## Kings Canyon Background ########## */
@@ -179,30 +213,27 @@ section {
 /* ########## Images ########## */
 
 .Wraith {
-    /* display: none; */
     position: fixed;
-    float: right;
     right: -100px;
-    top: 0px;
-    transition: 1s ease;
-    transform: scale(98%);
+    top: 0;
+    transition: 500ms ease;
+    transform: scale(70%);
     opacity: 35%;
     z-index: 0;
 }
 
 .Wraith:hover {
-    transform: scale(100%);
+    transform: scale(75%);
     opacity: 100%;
-    z-index: 5;
+    z-index: 1;
 }
 
 .Octane {
     position: fixed;
-    float: left;
     left: -12%;
     bottom: 0px;
     transform: rotateY(180deg) translateY(25%) scale(90%);
-    transition: 1s ease;
+    transition: 500ms ease;
     opacity: 35%;
     max-width: 60%;
     z-index: 0;
@@ -211,7 +242,7 @@ section {
 .Octane:hover {
     transform: rotateY(180deg) translateY(0) scale(100%) translateX(-25%);
     opacity: 100%;
-    z-index: 5;
+    z-index: 1;
 }
 
 /* ---------- @media queries ---------- */
@@ -222,11 +253,11 @@ section {
         overflow-wrap: break-word;
     }
     .Wraith {
-        display: none;
+        pointer-events: none;
+        max-width: 80%;
     }
     .Octane:hover {
         transform: rotateY(180deg) translateY(24%) scale(100%) translateX(-1%);
-        opacity: 100%;
     }
     .container .row {
         justify-content: space-around;
