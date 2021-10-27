@@ -35,10 +35,12 @@ html {
     font-weight: bold;
     text-transform: uppercase;
     font: normal 500 20px/8px var(--roboto);
+    transition: text-shadow 500ms ease-in;
 }
 
 .topbar .nav-link:hover {
-    text-decoration: underline var(--colorLink);
+    text-shadow: 0 0 4px var(--colorPrimary), 0 0 2em var(--colorPrimary);
+    transition: text-shadow 500ms ease-out;
 }
 
 .brand-logo {
@@ -51,11 +53,7 @@ html {
     color: #fff;
     line-height: 1em;
     padding: 1em;
-    animation-name: pulseShadow;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation: pulseShadow 1s linear infinite alternate;
     /* animation-delay: 2s; */
 }
 
@@ -89,22 +87,26 @@ html {
     text-align: center;
 }
 
-.container .card div {
-    /* outline: 1px solid lime; */
-}
-
 .card {
     outline: 1px solid var(--colorBorder);
     background-color: var(--colorBackground);
     max-width: 100%;
-    min-height: 50vh;
-    padding: 1vw;
+    min-height: 60vh;
+    padding-inline: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin-block: 10vh;
+    /*  */
 }
 
+.card h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+}
+.card a {
+    color: var(--colorLink);
+}
 .container h1, h3 {
     text-transform: uppercase;
     color: var(--colorTitle);
@@ -128,11 +130,12 @@ html {
 }
 
 .contactLink {
-    --lineW: 1px;
+    --lineW: 2px;
     border: var(--lineW) solid #fff;
+    border-radius: 50%;
     outline: var(--lineW) solid #fff;
     outline-offset: calc(-1 * var(--lineW));
-    transition: outline-offset 200ms linear;
+    transition: outline-offset 200ms ease;
 }
 
 .contactLink:hover {
@@ -144,29 +147,11 @@ html {
     display: block;
     height: var(--iconSize);
     min-width: var(--iconSize);
+    width: fit-content;
 }
-
-.github {
-    background-image: url('../img/github-icon.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.email {
-    background-image: url('../img/email.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.contactsBar a {
-    /* outline: 1px solid lime; */
-    max-width: max-content;
-}
-
-.row-title {}
 
 .row-content {
-    float: right;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* ########## Section ########## */
