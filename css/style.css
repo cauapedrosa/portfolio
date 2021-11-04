@@ -51,7 +51,6 @@ html {
     line-height: 1em;
     font-weight: 700;
     color: #fff;
-    line-height: 1em;
     padding: 1em;
     animation: pulseShadow 1s linear infinite alternate;
     /* animation-delay: 2s; */
@@ -104,9 +103,11 @@ html {
     font-family: 'Raleway', sans-serif;
     font-size: 3em;
 }
+
 .card a {
     color: var(--colorLink);
 }
+
 .container h1, h3 {
     text-transform: uppercase;
     color: var(--colorTitle);
@@ -143,7 +144,7 @@ html {
 }
 
 .contactLogo {
-    --iconSize: 100px;
+    --iconSize: min(150px, 15vw);
     display: block;
     height: var(--iconSize);
     min-width: var(--iconSize);
@@ -257,8 +258,9 @@ section {
 @media screen and (max-width: 991px) {
     .topbar {
         text-align: center;
-        overflow-wrap: break-word;
+        /* overflow-wrap: break-word; */
     }
+
     .Wraith {
         pointer-events: none;
         max-width: 80%;
@@ -274,4 +276,10 @@ section {
     .nav-link {
         display: none;
     }
+}
+
+@media screen and (max-width: 400px) {
+    .brand-logo {
+        padding: 15px;
+        }
 }
